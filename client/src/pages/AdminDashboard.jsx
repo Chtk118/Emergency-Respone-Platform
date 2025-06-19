@@ -99,7 +99,7 @@ function AdminDashboard() {
 
   const markResolved = async (id) => {
     try {
-      await axios.patch(`https://emergency-respone-platform.onrender.com/api/incidents/${id}`);
+      await axios.patch(`https://emergency-respone-platform.onrender.com/api/incidents/${id}`);;
       setFiltered((prev) =>
         prev.map((i) => (i._id === id ? { ...i, status: "Resolved" } : i))
       );
